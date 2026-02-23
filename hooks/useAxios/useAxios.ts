@@ -37,8 +37,7 @@ export function useAxios<T = unknown>(
     if (autoFetch) {
       fetchData();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [config]);
 
   return { data, loading, error, refetch: fetchData };
 }

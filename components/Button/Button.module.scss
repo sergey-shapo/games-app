@@ -1,0 +1,25 @@
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+.button {
+  padding: $spacing-sm $spacing-md;
+  background-color: $primary-color;
+  color: $secondary-color;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  @include transition(all, 0.2s);
+
+  &:hover {
+    background-color: $accent-color;
+    color: $text-color;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

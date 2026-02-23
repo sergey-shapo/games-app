@@ -1,9 +1,12 @@
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+
 .card {
-  background: #1c1c1c;
+  background: $secondary-color;
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.2s ease;
   cursor: pointer;
+  @include transition(transform, 0.2s, ease);
 
   &:hover {
     transform: translateY(-4px);
@@ -14,26 +17,29 @@
   position: relative;
   width: 100%;
   height: 180px;
-}
 
-.image {
-  object-fit: cover;
+  .image {
+    object-fit: cover;
+  }
 }
 
 .content {
-  padding: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  padding: $spacing-sm;
+  @include flex-between;
 
-.title {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #fff;
-}
+  .title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: $light-text-color;
+  }
 
-.rating {
-  font-size: 0.85rem;
-  color: #f5c518;
+  .rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
+    font-size: 0.85rem;
+    color: $primary-color;
+    white-space: nowrap;
+  }
 }
