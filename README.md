@@ -35,7 +35,7 @@ https://games-app-mocha.vercel.app/
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/chall.git
+   git clone https://github.com/sergey-shapo/games-app.git
    cd chall
    
 Install dependencies:
@@ -70,25 +70,6 @@ The project includes component tests (e.g. GameCard.test.tsx, Footer.test.tsx).
 npm test
 # or
 pnpm test
-
-
-Project Structure
-├── app/                    # App Router (pages, layouts, etc.)
-├── components/             # Reusable UI components
-│   ├── Footer/
-│   │   ├── Footer.tsx
-│   │   └── Footer.test.tsx
-│   └── GameCard/
-│       ├── GameCard.tsx
-│       └── GameCard.test.tsx
-├── public/                 # Static assets (images, favicon, etc.)
-├── styles/                 # Global styles (if any)
-├── jest.config.ts          # Jest configuration
-├── jest.setup.ts           # Setup for jest-dom matchers
-├── tsconfig.json
-├── next-env.d.ts
-├── package.json
-└── README.md
 
 Best Practices in This Project
 
