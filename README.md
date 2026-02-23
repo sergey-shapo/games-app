@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+A simple, modern web application built with **Next.js 16** (App Router) to showcase video game cards featuring titles, optimized images, ratings, and clickable links to game details.
 
-## Getting Started
+![Project Preview] 
 
-First, run the development server:
+https://games-app-mocha.vercel.app/
 
-```bash
-npm run dev
+
+## Features
+
+- Responsive game card component (`GameCard`)
+- Static footer with personal credit
+- Type-safe components with TypeScript
+- Scoped styling using Sass modules (`.module.scss`)
+- Unit & component tests with Jest + React Testing Library
+- Optimized images via `next/image`
+- Navigation using `next/link`
+
+## Tech Stack
+
+- **Next.js** 16.1.6 (App Router)
+- **React** 19.2.3
+- **TypeScript** ^5
+- **Sass** ^1.97.3 (modules)
+- **Jest** ^30.2.0 + **React Testing Library** ^16.3.2
+- **Axios** ^1.13.5 (for potential API requests)
+- **ESLint** with **eslint-config-next**
+
+## Prerequisites
+
+- Node.js ≥ 18.17 (recommended: 20.x or higher)
+- npm, pnpm (recommended), or yarn
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/chall.git
+   cd chall
+   
+Install dependencies:
+
+# Recommended (faster & cleaner lockfile)
+pnpm install
+
+# Or with npm
+npm install
+
+Running the Project
+Development (with hot reloading)
+
+# Recommended (faster & cleaner lockfile)
+pnpm install
+
+# Or with npm
+npm install
+
+# Or with yarn
+yarn install
+
+Production Build & Preview
+Build the app:
+
+npm run build
+# or pnpm build / yarn build
+
+Running Tests
+The project includes component tests (e.g. GameCard.test.tsx, Footer.test.tsx).
+
+npm test
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+pnpm test
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Project Structure
+├── app/                    # App Router (pages, layouts, etc.)
+├── components/             # Reusable UI components
+│   ├── Footer/
+│   │   ├── Footer.tsx
+│   │   └── Footer.test.tsx
+│   └── GameCard/
+│       ├── GameCard.tsx
+│       └── GameCard.test.tsx
+├── public/                 # Static assets (images, favicon, etc.)
+├── styles/                 # Global styles (if any)
+├── jest.config.ts          # Jest configuration
+├── jest.setup.ts           # Setup for jest-dom matchers
+├── tsconfig.json
+├── next-env.d.ts
+├── package.json
+└── README.md
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Best Practices in This Project
 
-## Learn More
+TypeScript for props and components
+Accessible test queries (getByRole, getByText, getByAltText)
+Mocked Next.js modules in tests (next/image, next/link)
+Sass modules for scoped, maintainable CSS
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
