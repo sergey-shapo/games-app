@@ -74,7 +74,10 @@ pnpm test
 ## Best Practices in This Project
 
 TypeScript for props and components
+
 Accessible test queries (getByRole, getByText, getByAltText)
+
 Mocked Next.js modules in tests (next/image, next/link)
+
 Sass modules for scoped, maintainable CSS
 
