@@ -38,7 +38,7 @@ https://games-app-mocha.vercel.app/
    git clone https://github.com/sergey-shapo/games-app.git
    cd chall
    
-Install dependencies:
+## Install dependencies:
 
 # Recommended (faster & cleaner lockfile)
 pnpm install
@@ -46,32 +46,32 @@ pnpm install
 # Or with npm
 npm install
 
-Running the Project
+## Running the Project
 Development (with hot reloading)
 
-# Recommended (faster & cleaner lockfile)
+Recommended (faster & cleaner lockfile)
 pnpm install
 
-# Or with npm
+Or with npm
 npm install
 
-# Or with yarn
+Or with yarn
 yarn install
 
-Production Build & Preview
+## Production Build & Preview
 Build the app:
 
 npm run build
-# or pnpm build / yarn build
+or pnpm build / yarn build
 
-Running Tests
+
+## Running Tests
 The project includes component tests (e.g. GameCard.test.tsx, Footer.test.tsx).
 
 npm test
-# or
 pnpm test
 
-Best Practices in This Project
+## Best Practices in This Project
 
 TypeScript for props and components
 Accessible test queries (getByRole, getByText, getByAltText)
