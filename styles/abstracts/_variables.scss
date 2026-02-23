@@ -1,0 +1,53 @@
+$color-primary: #6366f1;
+$color-primary-dark: #4f46e5;
+$color-accent: #f472b6;
+$color-success: #10b981;
+$color-warning: #f59e0b;
+$color-danger: #ef4444;
+
+$color-bg-primary: #0f172a;
+$color-bg-secondary: #1e293b;
+$color-bg-card: #1e293b;
+
+$color-text-primary: #f1f5f9;
+$color-text-secondary: #94a3b8;
+$color-text-muted: #64748b;
+
+$spacing: (
+  xs: 0.25rem,
+  sm: 0.5rem,
+  md: 1rem,
+  lg: 1.5rem,
+  xl: 2rem,
+  xxl: 3rem,
+  "3xl": 4rem,
+);
+
+$font-primary: "Inter", system-ui, sans-serif;
+$font-secondary: "Roboto Mono", monospace; // para scores, fechas, etc.
+
+$breakpoints: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  "2xl": 1536px,
+);
+
+:root {
+  --primary: #{$color-primary};
+  --primary-dark: #{$color-primary-dark};
+  --accent: #{$color-accent};
+  --bg-primary: #{$color-bg-primary};
+  --bg-secondary: #{$color-bg-secondary};
+  --bg-card: #{$color-bg-card};
+  --text-primary: #{$color-text-primary};
+  --text-secondary: #{$color-text-secondary};
+  --text-muted: #{$color-text-muted};
+
+  --font-primary: #{$font-primary};
+  --font-secondary: #{$font-secondary};
+
+  --spacing-xs: map-get($spacing, xs);
+  --spacing-sm: map-get($spacing, sm);
+}
