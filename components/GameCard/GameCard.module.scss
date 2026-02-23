@@ -1,0 +1,39 @@
+.card {
+  background: #1c1c1c;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.content {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.rating {
+  font-size: 0.85rem;
+  color: #f5c518;
+}
