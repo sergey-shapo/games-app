@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`GameCard matches snapshot 1`] = `
+<div>
+  <a
+    class="card"
+    href="/123"
+  >
+    <div
+      class="imageWrapper"
+    >
+      <img
+        alt="Super Mario Odyssey"
+        class="image"
+        src="/images/mario.jpg"
+      />
+    </div>
+    <div
+      class="content"
+    >
+      <h3
+        class="title"
+      >
+        Super Mario Odyssey
+      </h3>
+      <span
+        class="rating"
+      >
+        ⭐ 
+        4.8
+      </span>
+    </div>
+  </a>
+</div>
+`;
