@@ -1,82 +1,49 @@
-@mixin respond-to($breakpoint) {
-  $value: map-get($breakpoints, $breakpoint);
+@use "@/styles/abstracts/variables" as v;
 
-  @if $value {
-    @media (min-width: $value) {
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: v.$breakpoint-sm) {
       @content;
     }
-  } @else {
-    @warn "Breakpoint '#{$breakpoint}' no existe.";
+  } @else if $breakpoint == md {
+    @media (max-width: v.$breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (max-width: v.$breakpoint-lg) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (max-width: v.$breakpoint-xl) {
+      @content;
+    }
   }
 }
 
-@mixin card-base {
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  background: var(--bg-card);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-  transition: all 0.25s ease;
-}
-
-@mixin center {
+@mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-@mixin card-base {
-  background: var(--bg-card);
-  border-radius: 0.75rem;
-  overflow: hidden;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-  transition: all 0.25s ease;
-
-  &:hover,
-  &:focus-within {
-    transform: translateY(-0.375rem);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
-  }
-}
-
-@mixin hover-lift($scale: 1.04) {
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-
-  &:hover {
-    transform: scale($scale);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-  }
-}
-
-@mixin text-truncate {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-@mixin rating-star($rating) {
-  $stars: floor($rating / 2);
-  $half: $rating % 2 >= 1;
-
-  &::before {
-    content: str-replace("★★★★★", "★", $stars) + if($half, "½", "");
-    color: var(--accent);
-    letter-spacing: 0.1em;
-  }
-}
-
-@mixin button-base {
-  display: inline-flex;
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  padding: var(--spacing-sm) var(--spacing-lg);
-  border-radius: 0.5rem;
-  font-weight: 600;
-  transition: all 0.2s ease;
+}
 
-  &:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
-  }
+@mixin transition($props: all, $time: 0.3s, $ease: ease-in-out) {
+  transition: $props $time $ease;
+}
+
+@mixin card-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+@mixin text-truncate($lines: 1) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

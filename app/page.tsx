@@ -11,6 +11,8 @@ export default function Home() {
     method: "GET",
   });
 
+  console.log(data?.results[0]);
+
   return (
     <main className={styles.grid}>
       {data?.results.map((game) => (
@@ -19,6 +21,7 @@ export default function Home() {
           title={game.name}
           image={game.background_image}
           rating={game.rating}
+          id={game.id}
         />
       ))}
     </main>
