@@ -4,20 +4,23 @@ import { useParams } from "next/navigation";
 import { GameDetail } from "@/types/api/gameDetail.types";
 import { useAxios } from "@/hooks/useAxios/useAxios";
 import styles from "./GameDetail.module.scss";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Button from "@/components/Button/Button";
+import { useMemo } from "react";
 
 const GameDetailPage = () => {
   const { id } = useParams();
-  console.log(id);
+  const router = useRouter();
+  const config = useMemo(
+    () => ({
+      url: `/games/${id}`,
+      method: "GET",
+    }),
+    [id],
+  );
 
-  const {
-    data: game,
-    loading,
-    error,
-  } = useAxios<GameDetail>({
-    url: `/games/${id}`,
-    method: "GET",
-  });
+  const { data: game, loading, error } = useAxios<GameDetail>(config);
 
   if (loading) return <p className={styles.loading}>Loading...</p>;
   if (error) return <p className={styles.error}>Error loading game</p>;
@@ -71,6 +74,7 @@ const GameDetailPage = () => {
           </p>
         )}
       </section>
+      <Button label="← Back to Games" onClick={() => router.push("/")} />
     </div>
   );
 };
