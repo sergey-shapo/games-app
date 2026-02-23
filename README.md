@@ -1,5 +1,20 @@
 A simple, modern web application built with **Next.js 16** (App Router) to showcase video game cards featuring titles, optimized images, ratings, and clickable links to game details.
 
+## Why Next.js?
+
+This project uses **Next.js 16** (built on React) instead of pure React, Angular, or AngularJS for the following reasons (February 2026 perspective):
+
+- **Performance & SEO out of the box** — SSR, SSG, image optimization, and fast loads are built-in (critical for any public-facing catalog/app).
+- **Modern React with zero boilerplate** — file-based routing, API routes, TypeScript support, and App Router without extra libraries.
+- **Developer experience** — fast iteration, great DX, and seamless Vercel deployment (see live demo).
+- **Future-proof & scalable** — handles growth (add API, auth, dynamic data) without rewriting the stack.
+- **Better fit than alternatives**:
+  - Pure React → too much manual setup for routing/rendering/optimization.
+  - Angular (modern) → steeper curve, heavier for CSR-focused apps, less hybrid rendering flexibility.
+  - AngularJS → legacy, unmaintained, insecure, and obsolete in 2026.
+
+Next.js delivers the speed, simplicity, and modern features this game showcase deserves while staying firmly in the React ecosystem.
+
 ![Project Preview] 
 
 https://games-app-mocha.vercel.app/
