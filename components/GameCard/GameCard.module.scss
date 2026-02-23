@@ -4,6 +4,7 @@
 .card {
   background: $secondary-color;
   border-radius: 12px;
+  text-decoration: none;
   overflow: hidden;
   cursor: pointer;
   @include transition(transform, 0.2s, ease);
