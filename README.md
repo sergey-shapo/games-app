@@ -29,6 +29,11 @@ https://games-app-mocha.vercel.app/
 - Unit & component tests with Jest + React Testing Library
 - Optimized images via `next/image`
 - Navigation using `next/link`
+- - **Reusable `useAxios` custom hook** for API calls:  
+  - Built on a centralized Axios instance (`lib/api.ts`) with request/response interceptors  
+  - Automatically handles loading state, errors, and global error messages (e.g., 401, 404, 429 for RAWG API)  
+  - Supports easy integration in Client Components with React hooks  
+  - Keeps API logic separated from UI components for better maintainability and reusability
 
 ## Tech Stack
 
